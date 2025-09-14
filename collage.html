@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrusel de Fotos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .carousel {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+    .controls button {
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+
+    .controls button:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* Estilos para el menú */
+    .navbar {
+      width: 100%;
+      background: #333;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú de inicio agregado -->
+  <nav class="navbar">
+    <ul>
+      <li><a class="nav-link scrollto" href="index.html">Inicio</a></li>
+      <li><a class="nav-link scrollto active" href="collage.html">Collage</a></li>
+      <li><a class="nav-link scrollto" href="contacto.html">Contacto</a></li>
+      <!-- Agrega más enlaces si es necesario -->
+    </ul>
+  </nav>
+
+  <div class="carousel" style="margin-top:70px;">
+    <div class="slides" id="slideContainer">
+      <img src="assets/img/chino 1.jpeg" alt= "Foto 1">
+      <img src="assets/img/chino 2.jpeg" alt= "Foto 2">
+      <img src="assets/img/chino 3.jpeg" alt= "Foto 3">
+    </div>
+    <div class="controls">
+      <button onclick="prevSlide()">❮</button>
+      <button onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+
+  <script>
+    const slideContainer = document.getElementById('slideContainer');
+    const totalSlides = slideContainer.children.length;
+    let currentIndex = 0;
+
+    function updateSlide() {
+      slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    // Cambia automáticamente cada 5 segundos
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>

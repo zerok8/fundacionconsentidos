@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <meta name="description" content="Galería de fotos y videos de la Fundación Con Sentidos">
+    
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/galeria.css" rel="stylesheet">
+</head>
+
+<body class="galeria-page">
+
+<header id="header" class="header-new">
+    <!-- Sección superior: Logo y nombre -->
+    <div class="container-hero">
+      <div class="hero">
+        <div class="container-logo">
+          <img src="assets/img/favicon.png" alt="Logo Fundación con Sentidos" width="60" height="40">
+          <h1 class="logo"><a href="index.html">fundación con sentidos</a></h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección inferior: Menú de navegación -->
+    <div class="container-navbar">
+      <nav class="navbar">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <ul class="menu" id="navmenu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienessomos.html">Quiénes somos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="formasayudar.html">Formas de ayudar</a></li>
+          <li><a href="galeria.html" class="active">Galería</a></li>          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <main class="main">
+        <!-- Hero Banner -->
+        <section class="gallery-hero">
+            <div class="hero-content">
+                <h1>Galería</h1>
+                <div class="decoration-line"></div>
+                <p>Momentos especiales, sonrisas genuinas y aprendizajes que transforman vidas</p>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-buttons" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="fotos">Fotos</button>
+                    <button class="filter-btn" data-filter="videos">Videos</button>
+                    <button class="filter-btn" data-filter="eventos">Eventos</button>
+                    <button class="filter-btn" data-filter="actividades">Actividades</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-grid" id="galleryGrid">
+                    
+                    <!-- Foto 1 -->
+                    <div class="gallery-item" data-category="fotos eventos" data-aos="fade-up" data-aos-delay="100">
+                        <div class="gallery-card">
+                            <img src="assets/img/galeria/ninos.jpg" alt="Evento educativo especial">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-zoom-in"></i>
+                                    <!-- <h3>Día del Niño 2024</h3>
+                                    <p>Celebración especial con nuestros niños</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 1 -->
+                    <div class="gallery-item" data-category="videos actividades" data-aos="fade-up" data-aos-delay="200">
+                        <div class="gallery-card video-card">
+                            <video poster="assets/img/galeria/ocupacional.jpg" preload="metadata">
+                                <source src="assets/videos/ocupacional.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-play-circle"></i>
+                                    <h3>Terapia Ocupacional</h3>
+                                    <p>Ayuda a los niños a participar en las actividades diarias que son importantes para ellos</p>
+                                </div>
+                            </div>
+                            <div class="video-indicator">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 2 -->
+                    <div class="gallery-item" data-category="fotos actividades" data-aos="fade-up" data-aos-delay="300">
+                        <div class="gallery-card">
+                            <img src="assets/img/galeria/aprendizaje.jpg" alt="Actividad de aprendizaje">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-zoom-in"></i>
+                                    <!-- <h3>Actividades Cognitivas</h3>
+                                    <p>Desarrollo de habilidades de pensamiento</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 3 -->
+                    <div class="gallery-item" data-category="fotos eventos" data-aos="fade-up" data-aos-delay="400">
+                        <div class="gallery-card">
+                            <img src="assets/img/galeria/graduacion.jpg" alt="Ceremonia de graduación">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-zoom-in"></i>
+                                    <!-- <h3>Graduación 2024</h3>
+                                    <p>Momento especial de logros alcanzados</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="gallery-item" data-category="videos eventos" data-aos="fade-up" data-aos-delay="500">
+                        <div class="gallery-card video-card">
+                            <video poster="assets/img/galeria/hidroterapia.jpg" preload="metadata">
+                                <source src="assets/videos/hidroterapia.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-play-circle"></i>
+                                    <h3>Hidroterapia</h3>
+                                    <p>Mejora el desarrollo físico y cognitivo de los niños</p>
+                                </div>
+                            </div>
+                            <div class="video-indicator">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 4 -->
+                    <div class="gallery-item" data-category="fotos actividades" data-aos="fade-up" data-aos-delay="600">
+                        <div class="gallery-card">
+                            <img src="assets/img/galeria/arte.jpg" alt="Clase de arte y creatividad">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-zoom-in"></i>
+                                    <!-- <h3>Arte y Creatividad</h3>
+                                    <p>Expresión artística y desarrollo creativo</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 5 -->
+                    <div class="gallery-item" data-category="fotos actividades" data-aos="fade-up" data-aos-delay="700">
+                        <div class="gallery-card">
+                            <img src="assets/img/galeria/deporte.jpg" alt="Actividad deportiva adaptada">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-zoom-in"></i>
+                                    <!-- <h3>Deporte Adaptado</h3>
+                                    <p>Actividad física inclusiva</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="gallery-item" data-category="videos actividades" data-aos="fade-up" data-aos-delay="800">
+                        <div class="gallery-card video-card">
+                            <video poster="assets/img/galeria/musicoterapia.jpg" preload="metadata">
+                                <source src="assets/videos/actividad1.mp4" type="video/mp4">
+                                Tu navegador no soporta videos HTML5.
+                            </video>
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <i class="bi bi-play-circle"></i>
+                                    <h3>Terapias respiratorias</h3>
+                                    <p>Ayudan a desarrollar habilidades de respiración, coordinación ojo-mano y habilidades sociales</p>
+                                </div>
+                            </div>
+                            <div class="video-indicator">
+                                <i class="bi bi-play-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section" data-aos="fade-up">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        <span>Cargar más</span>
+                        <i class="bi bi-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para visualización ampliada -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalLabel">Galería</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent"></div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="prevBtn">
+                        <i class="bi bi-arrow-left"></i> Anterior
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="nextBtn">
+                        Siguiente <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+      <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/573214674955?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20la%20Fundación%20Con%20Sentidos" 
+     target="_blank" 
+     class="whatsapp-button-extended" 
+     aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-text">¡Contáctanos!</span>
+  </a>
+
+
+    <!-- Footer -->
+      <footer id="footer" class="footer position-relative light-background">
+    <section id="footer-contacto" class="section">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Información de contacto -->
+          <div class="col-lg-6 col-md-6 footer-about">
+            <div class="col-lg-6">
+              <h4>Contáctanos</h4>
+              <p>
+                Cra. 9a #20 - 25<br>
+                Sogamoso, (Boyacá) 152210<br>
+                Colombia.<br><br>
+                <strong>Email:</strong> misconsentidos2017@gmail.com<br>
+                <strong>Fijo:</strong> 7758269<br>
+                <strong>Cel:</strong> +57 321 467 4955 / +57 311 888 9481
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <div class="col-lg-6">
+            <!-- Mensaje de confirmación -->
+            <div id="success-message" class="success-message">
+              <i class="bi bi-check-circle-fill"></i>
+              ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.
+            </div>
+            
+            <form id="contact-form" action="#" method="post" class="php-email-form">
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" name="phone" class="form-control" placeholder="Teléfono">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" name="address" class="form-control" placeholder="Dirección">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" name="subject" class="form-control" placeholder="Asunto">
+                </div>
+                <div class="col-md-12">
+                  <textarea name="message" rows="5" class="form-control" placeholder="Escribe tu mensaje aquí..."
+                    required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit" id="submit-btn">Enviar mensaje</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </footer>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+    <!-- Main JS File -->
+   
+    <script src="assets/js/galeria.js"></script>
+
+</body>
+</html>
