@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Cronograma</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="eventos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+   <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/favicon.png" alt="Logo Fundación con Sentidos" width="40" height="40">
+        <h1 class="sitename">fundación con sentidos</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <!--Menu con dropdown-->
+        <ul>
+          <li><a href="index.html" class="active">Inicio<br></a></li>
+
+          <li class="dropdown">
+            <a href="quienessomos.html" aria-expanded="false">Quienes somos</a>
+          </li>
+          <li class="dropdown">
+            <a href="formasayudar.html" aria-expanded="false">Formas de ayudar</a>
+          </li>
+          <li class="dropdown">
+            <a href="eventos.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+              onclick="window.location.href='eventos.html';">
+              Eventos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="galeria.html">Galería</a></li>
+              <li><a class="dropdown-item" href="collage.html">Collage</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-eventos d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Nuestros Eventos</h1>
+                    <p>Descubre los eventos más emocionantes y únete a nuestra comunidad. Desde talleres especializados hasta conferencias magistrales.</p>
+                    <a href="#proximos-eventos" class="btn btn-primary">Ver Próximos Eventos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próximos Eventos -->
+    <section id="proximos-eventos" class="eventos-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Próximos Eventos</h2>
+                <p>No te pierdas estos increíbles eventos</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Evento 1 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">
+                        <div class="date-box">
+                            <span class="day">15</span>
+                            <span class="month">ENE</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="evento-card">
+                            <div class="evento-header">
+                                <h3>Workshop de Innovación Digital</h3>
+                                <span class="evento-categoria">Taller</span>
+                            </div>
+                            <div class="evento-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Centro de Convenciones Principal</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>50 participantes máximo</span>
+                                </div>
+                            </div>
+                            <p class="evento-description">
+                                Un taller intensivo donde aprenderás las últimas tendencias en tecnología digital y cómo implementarlas en tu negocio.
+                            </p>
+                            <div class="evento-actions">
+                                <button class="btn btn-primary" onclick="abrirModal('evento1')">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-ticket-alt"></i> Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">
+                        <div class="date-box">
+                            <span class="day">22</span>
+                            <span class="month">ENE</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="evento-card">
+                            <div class="evento-header">
+                                <h3>Conferencia de Liderazgo</h3>
+                                <span class="evento-categoria conferencia">Conferencia</span>
+                            </div>
+                            <div class="evento-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>7:00 PM - 9:30 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Auditorio Empresarial</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>200 participantes máximo</span>
+                                </div>
+                            </div>
+                            <p class="evento-description">
+                                Descubre las claves del liderazgo efectivo con ponentes reconocidos internacionalmente.
+                            </p>
+                            <div class="evento-actions">
+                                <button class="btn btn-primary" onclick="abrirModal('evento2')">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-ticket-alt"></i> Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">
+                        <div class="date-box">
+                            <span class="day">05</span>
+                            <span class="month">FEB</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="evento-card">
+                            <div class="evento-header">
+                                <h3>Meetup de Networking</h3>
+                                <span class="evento-categoria networking">Networking</span>
+                            </div>
+                            <div class="evento-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6:00 PM - 9:00 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Hotel Plaza Central</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>100 participantes máximo</span>
+                                </div>
+                            </div>
+                            <p class="evento-description">
+                                Conecta con profesionales de tu industria en un ambiente relajado y productivo.
+                            </p>
+                            <div class="evento-actions">
+                                <button class="btn btn-primary" onclick="abrirModal('evento3')">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-ticket-alt"></i> Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 4 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">
+                        <div class="date-box">
+                            <span class="day">18</span>
+                            <span class="month">FEB</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="evento-card">
+                            <div class="evento-header">
+                                <h3>Curso de Marketing Digital</h3>
+                                <span class="evento-categoria curso">Curso</span>
+                            </div>
+                            <div class="evento-info">
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>8:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Campus Universitario</span>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>30 participantes máximo</span>
+                                </div>
+                            </div>
+                            <p class="evento-description">
+                                Domina las estrategias de marketing digital más efectivas con casos prácticos y herramientas actuales.
+                            </p>
+                            <div class="evento-actions">
+                                <button class="btn btn-primary" onclick="abrirModal('evento4')">
+                                    <i class="fas fa-info-circle"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-primary">
+                                    <i class="fas fa-ticket-alt"></i> Reservar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendario -->
+    <section id="calendario" class="calendario-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Calendario de Eventos</h2>
+                <p>Vista general de todos nuestros eventos</p>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prevMonth" class="btn btn-outline-primary">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="currentMonth">Enero 2025</h3>
+                    <button id="nextMonth" class="btn btn-outline-primary">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div id="calendar" class="calendar-grid">
+                    <!-- El calendario se generará con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eventos Pasados -->
+    <section id="eventos-pasados" class="eventos-pasados-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Eventos Pasados</h2>
+                <p>Revive los mejores momentos de nuestros eventos anteriores</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="evento-pasado-card">
+                        <div class="evento-image">
+                            <div class="placeholder-img">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        </div>
+                        <div class="evento-content">
+                            <span class="fecha-pasada">28 Dic 2024</span>
+                            <h4>Summit Tecnológico 2024</h4>
+                            <p>Un evento exitoso con más de 300 participantes.</p>
+                            <button class="btn btn-sm btn-outline-primary">Ver Galería</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="evento-pasado-card">
+                        <div class="evento-image">
+                            <div class="placeholder-img">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        </div>
+                        <div class="evento-content">
+                            <span class="fecha-pasada">15 Dic 2024</span>
+                            <h4>Workshop de Emprendimiento</h4>
+                            <p>Taller práctico para nuevos emprendedores.</p>
+                            <button class="btn btn-sm btn-outline-primary">Ver Galería</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="evento-pasado-card">
+                        <div class="evento-image">
+                            <div class="placeholder-img">
+                                <i class="fas fa-image"></i>
+                            </div>
+                        </div>
+                        <div class="evento-content">
+                            <span class="fecha-pasada">02 Dic 2024</span>
+                            <h4>Conferencia Anual</h4>
+                            <p>Nuestra conferencia más importante del año.</p>
+                            <button class="btn btn-sm btn-outline-primary">Ver Galería</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para detalles del evento -->
+    <div class="modal fade" id="eventoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Título del Evento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent">
+                        <!-- El contenido se llenará dinámicamente -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Reservar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/573214674955?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20la%20Fundación%20Con%20Sentidos" 
+     target="_blank" 
+     class="whatsapp-button-extended" 
+     aria-label="Contactar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-text">¡Contáctanos!</span>
+  </a>
+
+
+    <!-- Footer -->
+ 
+  <footer id="footer" class="footer position-relative light-background">
+    <section id="footer-contacto" class="section">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Información de contacto -->  <div class="col-lg-6 col-md-6 footer-about">
+          <div class="col-lg-6">
+            <h4>Contáctanos</h4>
+            <p>
+              Cra. 9a #20 - 25<br>
+              Sogamoso, (Boyacá) 152210<br>
+              Colombia.<br><br>
+              <strong>Email:</strong> misconsentidos2017@gmail.com<br>
+              <strong>Fijo:</strong> 7758269<br>
+              <strong>Cel:</strong> +57 321 467 4955 / +57 311 888 9481
+            </p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <div class="col-lg-6">
+            <form action="#" method="post" class="php-email-form">
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" name="phone" class="form-control" placeholder="Teléfono">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" name="address" class="form-control" placeholder="Dirección">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" name="subject" class="form-control" placeholder="Asunto">
+                </div>
+                <div class="col-md-12">
+                  <textarea name="message" rows="5" class="form-control" placeholder="Escribe tu mensaje aquí..."
+                    required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit">Enviar mensaje</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="eventos.js"></script>
+</body>
+</html>
