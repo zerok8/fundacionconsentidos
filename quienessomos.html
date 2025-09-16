@@ -34,32 +34,33 @@
 <body class="about-page">
 
   <header id="header" class="header-new">
-    <!-- Sección superior: Logo y nombre -->
-    <div class="container-hero">
-      <div class="hero">
-        <div class="container-logo">
-          <img src="assets/img/favicon.png" alt="Logo Fundación con Sentidos" width="60" height="40">
-          <h1 class="logo"><a href="index.html">fundación con sentidos</a></h1>
+        <!-- Sección superior: Logo y nombre -->
+        <div class="container-hero">
+            <div class="hero">
+                <div class="container-logo">                    
+                 <img src="assets/img/favicon.png" alt="Logo Fundación con Sentidos" width="60" height="40">
+                    <h1 class="logo"><a href="index.html">fundación con sentidos</a></h1>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Sección inferior: Menú de navegación -->
-    <div class="container-navbar">
-      <nav class="navbar">
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-          <i class="bi bi-list"></i>
-        </button>
-        <ul class="menu" id="navmenu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="quienessomos.html" class="active">Quiénes somos</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="formasayudar.html">Formas de ayudar</a></li>
-          <li><a href="galeria.html" >Galería</a></li>          
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <!-- Sección inferior: Menú de navegación -->
+        <div class="container-navbar">
+            <nav class="navbar">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation" id="mobile-nav-toggle">
+                    <i class="bi bi-list"></i>
+                    <i class="bi bi-x"></i>
+                </button>
+                <ul class="menu" id="navmenu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienessomos.html" class="active">Quiénes somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="formasayudar.html">Formas de ayudar</a></li>
+                    <li><a href="galeria.html">Galería</a></li>          
+                </ul>
+            </nav>
+        </div>
+    </header>
 
 
   <main class="main">
@@ -184,29 +185,36 @@
     <section id="footer-contacto" class="section">
       <div class="container">
         <div class="row gy-4">
-          <!-- Información de contacto -->  <div class="col-lg-6 col-md-6 footer-about">
-          <div class="col-lg-6">
-            <h4>Contáctanos</h4>
-            <p>
-              Cra. 9a #20 - 25<br>
-              Sogamoso, (Boyacá) 152210<br>
-              Colombia.<br><br>
-              <strong>Email:</strong> misconsentidos2017@gmail.com<br>
-              <strong>Fijo:</strong> 7758269<br>
-              <strong>Cel:</strong> +57 321 467 4955 / +57 311 888 9481
-            </p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+          <!-- Información de contacto -->
+          <div class="col-lg-6 col-md-6 footer-about">
+            <div class="col-lg-6">
+              <h4>Contáctanos</h4>
+              <p>
+                Cra. 9a #20 - 25<br>
+                Sogamoso, (Boyacá) 152210<br>
+                Colombia.<br><br>
+                <strong>Email:</strong> misconsentidos2017@gmail.com<br>
+                <strong>Fijo:</strong> 7758269<br>
+                <strong>Cel:</strong> +57 321 467 4955 / +57 311 888 9481
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
           </div>
 
           <!-- Formulario de contacto -->
           <div class="col-lg-6">
-            <form action="#" method="post" class="php-email-form">
+            <!-- Mensaje de confirmación -->
+            <div id="success-message" class="success-message">
+              <i class="bi bi-check-circle-fill"></i>
+              ¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.
+            </div>
+            
+            <form id="contact-form" action="#" method="post" class="php-email-form">
               <div class="row gy-3">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Nombre" required>
@@ -228,7 +236,7 @@
                     required></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <button type="submit">Enviar mensaje</button>
+                  <button type="submit" id="submit-btn">Enviar mensaje</button>
                 </div>
               </div>
             </form>

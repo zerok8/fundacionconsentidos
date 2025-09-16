@@ -11,42 +11,35 @@
 </head>
 <body>
     <!-- Header -->
-   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-      
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/favicon.png" alt="Logo Fundación con Sentidos" width="40" height="40">
-        <h1 class="sitename">fundación con sentidos</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <!--Menu con dropdown-->
-        <ul>
-          <li><a href="index.html" class="active">Inicio<br></a></li>
 
-          <li class="dropdown">
-            <a href="quienessomos.html" aria-expanded="false">Quienes somos</a>
-          </li>
-          <li class="dropdown">
-            <a href="formasayudar.html" aria-expanded="false">Formas de ayudar</a>
-          </li>
-          <li class="dropdown">
-            <a href="eventos.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
-              onclick="window.location.href='eventos.html';">
-              Eventos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="galeria.html">Galería</a></li>
-              <li><a class="dropdown-item" href="collage.html">Collage</a></li>
-            </ul>
-          </li>
+  <header id="header" class="header-new">
+        <!-- Sección superior: Logo y nombre -->
+        <div class="container-hero">
+            <div class="hero">
+                <div class="container-logo">                    
+                 <img src="assets/img/favicon.png" alt="Logo Fundación con Sentidos" width="60" height="40">
+                    <h1 class="logo"><a href="index.html">fundación con sentidos</a></h1>
+                </div>
+            </div>
+        </div>
 
-        </ul>
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
+        <!-- Sección inferior: Menú de navegación -->
+        <div class="container-navbar">
+            <nav class="navbar">
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation" id="mobile-nav-toggle">
+                    <i class="bi bi-list"></i>
+                    <i class="bi bi-x"></i>
+                </button>
+                <ul class="menu" id="navmenu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="quienessomos.html">Quiénes somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="formasayudar.html">Formas de ayudar</a></li>
+                    <li><a href="galeria.html">Galería</a></li>          
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-eventos d-flex align-items-center">
