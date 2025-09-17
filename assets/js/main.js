@@ -194,7 +194,7 @@
         }
 
         function openMobileMenu() {
-            console.log('Abriendo menú móvil');
+            // console.log('Abriendo menú móvil');
             navMenu.classList.add('mobile-nav-active');
             mobileToggle.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevenir scroll
@@ -202,7 +202,7 @@
         }
 
         function closeMobileMenu() {
-            console.log('Cerrando menú móvil');
+            //console.log('Cerrando menú móvil');
             navMenu.classList.remove('mobile-nav-active');
             mobileToggle.classList.remove('active');
             document.body.style.overflow = '';
